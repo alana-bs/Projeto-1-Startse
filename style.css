@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,500&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0 ;
+    box-sizing: border-box;
+               
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Poppins', 'Times New Roman', Times, serif ;
+    scroll-behavior: smooth;
+
+}
+body{
+    background-color: black;
+    font-size: 100%;
+}
+a{
+    text-decoration: none;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 0.05rem;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Seção header*/
+.cabeçalho {
+    display: inline-block;
+    flex-direction: row;
+    justify-content:space-between;
+    flex-direction: row-reverse; 
+    padding: 30px;
+  
+}
+.cabeçalho .menu {
+    display: flex;
+    gap: 60px;
+     
+}
+.cabeçalho .menu-item{
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    
+}
+.cabeçalho .menu-item:hover{
+    color: gold;
+    transition: 0.3s all;
+}
+
+/* Seção de apresentação */
+#presentation{
+    border-top: 0.4px solid white;
+}
+#presentation h1{
+    margin: auto;
+    display: block;
+    width: fit-content;
+    font-size: 35px;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 2.5s;
+                  
+}
+
+#presentation h1:nth-child(1){
+    animation-delay: 2.8s;
+}
+
+#presentation h1:nth-child(2){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 4.8s;
+}
+
+#presentation .cta{
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    background-color: transparent;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 50px;
+    transition: .9s ease;
+    transition-property: background-color, color;
+    margin: 20px;
+    text-decoration: none;
+    background-position: top center;
+}
+
+#presentation .cta:hover{
+    color: gold;
+    font-weight: 500;
+    background-color: white;
+}
+
+#presentation h1 span{
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 0%;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+    background-color: gold;
+}
+
+#presentation h1:nth-child(1) span{
+    animation-delay: 2.5s;
+}
+
+#presentation h1:nth-child(2) span{
+    animation-delay: 3.5s;
+}
+
+#presentation h1:nth-child(3) span{
+    animation-delay: 4.5s;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    grid-gap: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 100px; 
+            
+}
+.grid3-item:nth-child(1){
+    grid-row: 1 / 3;
+}
+.grid3-item{
+    display: grid;
+}
+.grid3-item img{
+    grid-column: 1;
+    grid-row: 1/3;
+    align-self: end;
+}
+
+/* Secão imagens */
+.job-title{
+    color: white;
+    font-size: 3rem;
+    margin-top: 50px;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+
+}
+
+.job-gallery{
+    color: white;
+    font-size: 20px;
+    padding: 0;
+    margin: 50px;
+    margin-top: 10px;
+    display: block;
+    position: relative;
+ 
+}
+.gallery{
+    width: 100%;
+    max-width: 1350px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px
+}
+
+
+/* Seção Depoimento */
+#testimonial .portfolio{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#testimonial .section-title{
+    color: white;
+    width: fit-content;
+    font-size: 3rem;
+    margin-top: 100px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+#testimonial .portfolio-header h1{
+    margin-bottom: 50px;
+    
+}
+#testimonial .all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#testimonial .project-item{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#testimonial .project-info {
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #f7f4f0 0%, #eb9d29 100%);
+    color: rgb(230, 75, 4);
+}
+
+#testimonial .project-info h1{
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+#testimonial .project-info h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+#testimonial .project-img {
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+#testimonial .project-img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.7;
+}
+#testimonial .project-img img{
+    transition: 0.5s ease transform;
+}
+#testimonial .project-item:hover .project-img img{
+    transform: scale(1.1);
+}
+
+/* Keyframes */
+
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+@keyframes text_reveal_name{
+    100%{
+        color: white;
+        font-weight: 500px;
+    }
+}
+
+@keyframes text_reveal_box{
+    50%{
+        width:100%;
+        left:0;
+    }
+    100%{
+        width: 0;
+        left:100%
+    }
+}
+
+/* Media Query */
+@media only screen and (min-width: 768px) {
+    #testimonial .project-item {
+        flex-direction: row;
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #testimonial .all-projects .project-info{
+        height: 100%
+    }
+    #testimonial .all-projects .project-img{
+        height: 100%
+    }
+    #testimonial .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+.baseboard{
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 30px;
+
+}
+}
